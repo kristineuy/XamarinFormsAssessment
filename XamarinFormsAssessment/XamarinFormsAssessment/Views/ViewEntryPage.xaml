@@ -1,0 +1,28 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsAssessment.ViewEntryPage"
+             Title="View Entry">
+    <StackLayout Padding="20">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="ID:" VerticalOptions="Center" FontSize="16"/>
+            <Label Text="{Binding EntryID}" FontAttributes="Bold" FontSize="Medium"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Label Text="First Name:" VerticalOptions="Center" FontSize="16"/>
+            <Label Text="{Binding FirstName}" FontAttributes="Bold"  FontSize="Medium"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Last Name:" VerticalOptions="Center" FontSize="16"/>
+            <Label Text="{Binding LastName}" FontAttributes="Bold" FontSize="Medium"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date of Birth:" VerticalOptions="Center" FontSize="16" />
+            <Label Text="{Binding DateOfBirth, StringFormat='{0:MM/dd/yyyy}'}" FontAttributes="Bold" FontSize="Medium"/>
+        </StackLayout>
+
+        <Button Text="Delete Entry" Clicked="OnDeleteButtonClicked" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Turquoise" CornerRadius="5"/>
+    </StackLayout>
+</ContentPage>

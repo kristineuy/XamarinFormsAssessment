@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsAssessment.MainPage"
+             Title="~Entries~">
+    <StackLayout Padding="10">
+        <CollectionView x:Name="entriesView" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label Text="{Binding FirstName}" FontSize="18" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                            <Label Text="{Binding LastName}" FontSize="18" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                            <Label Text="," FontSize="18" TextColor="Black"/>
+                            <Label Text="{Binding Age}" FontSize="16" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                            <Label Text="years old" FontSize="16" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="2" Color="LightGray" Margin="0,5,0,5"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add Entry" Clicked="OnAddEntryClicked" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Turquoise" CornerRadius="5"/>
+    </StackLayout>
+</ContentPage>
